@@ -1,22 +1,44 @@
 var SearchPageController = (function(){
     function SearchPageController(
-        currentProfessions
+        currentProfessions,
+        categoryService,
+        $location
     ){
-        this.foundItems = [
-            { name: 'Item one' },
-            { name: 'Item two' },
-            { name: 'Item three' }
-        ];
+        this.foundItems = [];
         this.selectedItem = undefined;
+        this.searchText = undefined;
         this.currentProfessions = currentProfessions;
+        this.categoryService = categoryService;
+        this.$location = $location;
     }
 
+    SearchPageController.prototype.onInput = function() {
+        if (!this.searchText) {
+            return;
+        }
+        this.foundItems = this.categoryService.search(this.searchText);
+    };
+
     SearchPageController.prototype.onSelect = function() {
-        console.log(this.selectedItem);
+        this.categoryService.getDetails(this.selectedItem)
+            .then(this.resolveResultsType.bind(this));
+    };
+
+    SearchPageController.prototype.resolveResultsType = function(queryResults) {
+        if (this.isProfessionsCategory(queryResults)) {
+            this.currentProfessions.setNewData(queryResults.professions);
+            this.$location.path('/professions');
+        }
+    };
+
+    SearchPageController.prototype.isProfessionsCategory = function(dataToCheck){
+        return 'professions' in dataToCheck;
     };
 
     SearchPageController.$inject = [
-        'currentProfessions'
+        'currentProfessions',
+        'categoryService',
+        '$location'
     ];
 
     return SearchPageController;
@@ -31,6 +53,6 @@ function configSearchPageRoute($routeProvider) {
 }
 configSearchPageRoute.$inject = ['$routeProvider'];
 
-angular.module('myApp.searchPage', ['ngRoute'])
+angular.module('myApp')
     .config(configSearchPageRoute);
 
