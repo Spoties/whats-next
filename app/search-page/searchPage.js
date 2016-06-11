@@ -20,8 +20,7 @@ var SearchPageController = (function(){
     };
 
     SearchPageController.prototype.onSelect = function() {
-        console.log(this.selectedItem);
-        console.log(this.$location.path('/professions'));
+        this.$location.path('/professions');
     };
 
     SearchPageController.$inject = [

@@ -1,8 +1,14 @@
 var ProfessionsPageController = (function(){
     function ProfessionsPageController() {
-        console.log('professions page init');
+        this.professions = [
+            { name: 'Prof 1'},
+            { name: 'Prof 2'},
+            { name: 'Prof 3'},
+            { name: 'Prof 4'}
+        ];
     }
 
+    return ProfessionsPageController;
 })();
 
 function configProfessionsPageRoute($routeProvider) {
