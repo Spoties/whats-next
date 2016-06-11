@@ -4,7 +4,6 @@
 angular.module('myApp', [
     'ngRoute',
     'myApp.searchPage',
-    'myApp.view2',
     'myApp.version',
     'ngAnimate',
     'ngMaterial'
