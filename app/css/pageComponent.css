@@ -3,10 +3,18 @@
 }
 
 .page__title {
-    margin: 15px 0;
-    font-size: 18px;
+    margin: 0;
+    font-size: 24px;
+    line-height: 55px;
     font-weight: 400;
-    text-align: center;
+}
+
+.page__logo {
+    vertical-align: middle;
+    margin: -0.5em 0;
+    width: 1em;
+    height: 1em;
+    font-size: 60px;
 }
 
 .page__navigation {

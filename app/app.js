@@ -7,8 +7,14 @@ angular.module('myApp', [
     'myApp.version',
     'ngAnimate',
     'ngMaterial'
-]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
-    $locationProvider.hashPrefix('!');
+]).config([
+    '$locationProvider',
+    '$routeProvider',
+    '$mdIconProvider',
+    function ($locationProvider, $routeProvider, $mdIconProvider) {
+        $locationProvider.hashPrefix('!');
 
-    $routeProvider.otherwise({redirectTo: '/'});
-}]);
+        $routeProvider.otherwise({redirectTo: '/'});
+        $mdIconProvider.icon('logo', 'assets/logo.svg');
+    }
+]);

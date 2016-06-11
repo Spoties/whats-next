@@ -25,9 +25,12 @@ var SearchPageController = (function(){
     };
 
     SearchPageController.prototype.resolveResultsType = function(queryResults) {
+        this.currentProfessions.setNewData(queryResults);
         if (this.isProfessionsCategory(queryResults)) {
-            this.currentProfessions.setNewData(queryResults.professions);
             this.$location.path('/professions');
+        }
+        else {
+            this.$location.path('/paths');
         }
     };
 

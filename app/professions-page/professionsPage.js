@@ -2,8 +2,7 @@ var ProfessionsPageController = (function(){
     function ProfessionsPageController(
         currentProfessions
     ) {
-        this.professions = currentProfessions.getCurrentData();
-        console.log(this.professions);
+        this.professions = currentProfessions.getCurrentData().professions;
     }
 
     ProfessionsPageController.$inject = [
