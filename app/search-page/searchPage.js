@@ -1,8 +1,17 @@
 var SearchPageController = (function(){
     function SearchPageController(){
-        console.log('search page onInit');
         this.title = 'Search autocomplete';
+        this.foundItems = [
+            { name: 'Item one' },
+            { name: 'Item two' },
+            { name: 'Item three' }
+        ];
+        this.selectedItem = undefined;
     }
+
+    SearchPageController.prototype.onSelect = function() {
+        console.log(this.selectedItem);
+    };
 
     return SearchPageController;
 })();
