@@ -1,0 +1,42 @@
+{
+    "categories": {
+        "programmer": {
+            "displayName": "Programmer",
+            "description": "blah blah",
+            "professions": [ "ios", "cpp" ]
+        }
+    },
+    "professions": {
+        "ios": {
+            "displayName": "iOS Developer",
+            "description": "blah blah",
+            "educationPaths": [ "path1", "path2" ]
+        },
+        "cpp": {
+            "displayName": "C++ Developer",
+            "description": "blah blah",
+            "educationPaths": [ "path2" ]
+        }
+    },
+    "educationPaths": {
+        "path1": [ "elementary", "udemy" ],
+        "path2": [ "elementary", "highschool", "udemy" ]
+    },
+    "educationElements": {
+        "elementary": {
+            "displayName": "Elementary school",
+            "country": "PL",
+            "description": "blah blah"
+        },
+        "highschool": {
+            "displayName": "High school",
+            "country": "PL",
+            "description": "blah blah"
+        },
+        "udemy": {
+            "displayName": "Udemy courses",
+            "country": "US",
+            "description": "blah blah"
+        }
+    }
+}

@@ -1,10 +1,16 @@
 var Page = (function() {
-    function Page() {
+    function Page(categoryService) {
         this.isNavDisplayed = false;
+        this.categoryService = categoryService;
     }
+
+    Page.$inject = [ 'categoryService' ];
 
     Page.prototype.$onInit = function () {
         console.log('page onInit');
+        this.categoryService.search('er').then(function(result) {
+            console.log(result);
+        });
     };
 
     Page.prototype.showNav = function() {
