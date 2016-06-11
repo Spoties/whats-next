@@ -1,16 +1,23 @@
 var SearchPageController = (function(){
-    function SearchPageController(){
+    function SearchPageController(
+        currentProfessions
+    ){
         this.foundItems = [
             { name: 'Item one' },
             { name: 'Item two' },
             { name: 'Item three' }
         ];
         this.selectedItem = undefined;
+        this.currentProfessions = currentProfessions;
     }
 
     SearchPageController.prototype.onSelect = function() {
         console.log(this.selectedItem);
     };
+
+    SearchPageController.$inject = [
+        'currentProfessions'
+    ];
 
     return SearchPageController;
 })();
