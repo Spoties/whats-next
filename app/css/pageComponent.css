@@ -1,23 +1,34 @@
 .page {
     position: relative;
-    min-height: 100vh;
+}
+
+.page__title {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
 }
 
 .page__navigation {
-    position: absolute;
+    position: fixed;
     top: 0;
-    bottom: 0;
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 280px;
-    padding: 20px 0;
-    background: yellowgreen;
-    transform: translateX(-100%);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transform: translateX(-105%);
     transition: transform ease 0.3s;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
-
 
 .page__navigation--shown {
     transform: translateX(0);
+}
+
+.page-nav {
+    box-sizing: border-box;
+    width: 280px;
+    min-height: 100vh;
+    padding: 20px 0;
+    background: yellowgreen;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
