@@ -1,22 +1,29 @@
 var SearchPageController = (function(){
     function SearchPageController(
-        currentProfessions
+        currentProfessions,
+        categoryService
     ){
-        this.foundItems = [
-            { name: 'Item one' },
-            { name: 'Item two' },
-            { name: 'Item three' }
-        ];
+        this.foundItems = [];
         this.selectedItem = undefined;
+        this.searchText = undefined;
         this.currentProfessions = currentProfessions;
+        this.categoryService = categoryService;
     }
+
+    SearchPageController.prototype.onInput = function() {
+        if (!this.searchText) {
+            return;
+        }
+        this.foundItems = this.categoryService.search(this.searchText);
+    };
 
     SearchPageController.prototype.onSelect = function() {
         console.log(this.selectedItem);
     };
 
     SearchPageController.$inject = [
-        'currentProfessions'
+        'currentProfessions',
+        'categoryService'
     ];
 
     return SearchPageController;
