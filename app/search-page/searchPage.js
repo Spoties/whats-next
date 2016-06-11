@@ -20,7 +20,19 @@ var SearchPageController = (function(){
     };
 
     SearchPageController.prototype.onSelect = function() {
-        this.$location.path('/professions');
+        this.categoryService.getDetails(this.selectedItem)
+            .then(this.resolveResultsType.bind(this));
+    };
+
+    SearchPageController.prototype.resolveResultsType = function(queryResults) {
+        if (this.isProfessionsCategory(queryResults)) {
+            this.currentProfessions.setNewData(queryResults.professions);
+            this.$location.path('/professions');
+        }
+    };
+
+    SearchPageController.prototype.isProfessionsCategory = function(dataToCheck){
+        return 'professions' in dataToCheck;
     };
 
     SearchPageController.$inject = [

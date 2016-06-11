@@ -1,13 +1,14 @@
 var ProfessionsPageController = (function(){
-    function ProfessionsPageController() {
-        this.professions = [
-            { name: 'Prof 1'},
-            { name: 'Prof 2'},
-            { name: 'Prof 3'},
-            { name: 'Prof 4'}
-        ];
+    function ProfessionsPageController(
+        currentProfessions
+    ) {
+        this.professions = currentProfessions.getCurrentData();
+        console.log(this.professions);
     }
 
+    ProfessionsPageController.$inject = [
+        'currentProfessions'
+    ];
     return ProfessionsPageController;
 })();
 
