@@ -1,13 +1,15 @@
 var SearchPageController = (function(){
     function SearchPageController(
         currentProfessions,
-        categoryService
+        categoryService,
+        $location
     ){
         this.foundItems = [];
         this.selectedItem = undefined;
         this.searchText = undefined;
         this.currentProfessions = currentProfessions;
         this.categoryService = categoryService;
+        this.$location = $location;
     }
 
     SearchPageController.prototype.onInput = function() {
@@ -19,11 +21,13 @@ var SearchPageController = (function(){
 
     SearchPageController.prototype.onSelect = function() {
         console.log(this.selectedItem);
+        console.log(this.$location.path('/professions'));
     };
 
     SearchPageController.$inject = [
         'currentProfessions',
-        'categoryService'
+        'categoryService',
+        '$location'
     ];
 
     return SearchPageController;
@@ -38,6 +42,6 @@ function configSearchPageRoute($routeProvider) {
 }
 configSearchPageRoute.$inject = ['$routeProvider'];
 
-angular.module('myApp.searchPage', ['ngRoute'])
+angular.module('myApp')
     .config(configSearchPageRoute);
 
