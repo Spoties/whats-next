@@ -46,7 +46,7 @@ angular.module('myApp')
 
         var paths = [];
         profession.educationPaths.forEach(function(pathId) {
-            paths = paths.concat(resolveEducationPath(data, pathId));
+            paths.push(resolveEducationPath(data, pathId));
         });
         result['educationPaths'] = paths;
 
