@@ -8,7 +8,7 @@ var Page = (function() {
 
     Page.prototype.$onInit = function () {
         console.log('page onInit');
-        this.categoryService.search('er').then(function(result) {
+        this.categoryService.getDetails({id:'programmer', name:'Programmer', type:'category'}).then(function(result) {
             console.log(result);
         });
     };
