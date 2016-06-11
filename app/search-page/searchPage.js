@@ -1,6 +1,5 @@
 var SearchPageController = (function(){
     function SearchPageController(){
-        this.title = 'Search autocomplete';
         this.foundItems = [
             { name: 'Item one' },
             { name: 'Item two' },

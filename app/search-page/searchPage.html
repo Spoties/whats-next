@@ -1,11 +1,12 @@
-<h1 ng-bind="searchPage.title"></h1>
-<md-autocomplete
-        md-selected-item="searchPage.selectedItem"
-        md-items="item in searchPage.foundItems"
-        md-item-text="item.name"
-        md-autofocus="true"
-        md-selected-item-change="searchPage.onSelect()"
-        placeholder="Choose your target..."
->
-    <span ng-bind="item.name"></span>
-</md-autocomplete>
+<div class="search-page__autocomplete-container">
+    <md-autocomplete
+            md-selected-item="searchPage.selectedItem"
+            md-items="item in searchPage.foundItems"
+            md-item-text="item.name"
+            md-autofocus="true"
+            md-selected-item-change="searchPage.onSelect()"
+            placeholder="Choose your target..."
+    >
+        <span ng-bind="item.name"></span>
+    </md-autocomplete>
+</div>
