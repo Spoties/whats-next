@@ -1,0 +1,28 @@
+<div class="page">
+    <div class="page__header" ng-click="page.showNav()">
+        <button type="button"
+                class="page__nav-toggle"
+        >Menu</button>
+    </div>
+    <nav class="page__navigation page-nav"
+         ng-class="{
+                'page__navigation--shown': page.isNavDisplayed
+            }"
+    >
+        <button class="page-nav__hide-btn"
+                type="button"
+                ng-click="page.hideNav()"
+        >Hide</button>
+        <ul class="page-nav__items">
+            <li class="page-nav__item">
+                <a class="page-nav__link" href="#!/view1">view1</a>
+            </li>
+            <li class="page-nav__item">
+                <a class="page-nav__link" href="#!/view2">view2</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="page__content">
+        <div ng-view></div>
+    </div>
+</div>
