@@ -3,19 +3,72 @@
         "programmer": {
             "displayName": "Programmer",
             "description": "blah blah",
-            "professions": [ "ios", "cpp" ]
+            "professions": [ "frontend", "ios", "cpp" ]
         }
     },
     "professions": {
+        "frontend": {
+            "displayName": "Frontend-Developer",
+            "description": "Warstwa front-endowa dzisiejszych aplikacji to wszystko to co dzieje się po stronie klienta – logika aplikacji WWW działająca w przeglądarce (JavaScript), szablony stron (HTML) oraz ich styl (Kaskadowe arkusze stylów – CSS). Tak naprawdę wszystko to, co widzimy w dzisiejszych aplikacjach WWW (takich jak Facebook, Twitter) to kombinacja wyżej wymienionych technologii kontrolowanych właśnie przez przeglądarkę internetową.",
+            "educationPaths": [
+                {
+                    "type": "individual",
+                    "description": "Aby zostać programistą nie trzeba mieć doświadczenia nabytego w szkole. Wystarczą Ci chęci i pomysły. Dobrym planem w takiej sytuacji jest nauka z, na przykład, kursów internetowych. Poradniki, które powinny Cię zainteresować: Mirosław Zelent, Michał Ziółkowski, Coders Lab. Kolejnym krokiem po nauczeniu się chociażby podstaw jest dostanie się na staż. Szczególnie polecane są software house'y. Po przynajmniej najkrótszym stażu pozostało Ci tylko znaleźć pracę! W firmach zwykle szukają na podstawie doświadczenia.",
+                    "path": "path1"
+                },
+                {
+                    "type": "recommended",
+                    "description": "Jeśli przed Tobą jeszcze szkoła wyższa i studia, a zależy Ci na dokładnym  nauczeniu się konkretnego front-endu to warto abyś zdecydował się na technikum. Z powodu, że mieszkasz w Warszawie to radzimy Ci wybranie Technikum Mechatronicznego nr. 1. Po techniku pora na studia lub politechnikę, dla Ciebie najlepszym wyborem byłoby MiNI PW. Reszta tak jak w kroku indywidualnym.",
+                    "path": "path2"
+                },
+                {
+                    "type": "fast",
+                    "description": "Jeśli już za późno na dokładną naukę, a niedługo będziesz miał szanse na pracę jako front-endowiec to twoim głównym celem  powinny być przyspieszone kursy. Nauka indywidualna często się przedłuża więc w tym przypadku warto zainwestować w dodatkowe szkolenia. Najlepszym do tego miejscem byłoby Coders Lab.",
+                    "path": "path1"
+                }
+            ]
+        },
         "ios": {
             "displayName": "iOS Developer",
-            "description": "blah blah",
-            "educationPaths": [ "path1", "path2" ]
+            "description": "Developer for iOS apps",
+            "educationPaths": [
+                {
+                    "type": "individual",
+                    "description": "blah blah",
+                    "path": "path1"
+                },
+                {
+                    "type": "recommended",
+                    "description": "blah blah",
+                    "path": "path2"
+                },
+                {
+                    "type": "fast",
+                    "description": "blah blah",
+                    "path": "path1"
+                }
+            ]
         },
         "cpp": {
             "displayName": "C++ Developer",
-            "description": "blah blah",
-            "educationPaths": [ "path2" ]
+            "description": "Developer for C++ apps",
+            "educationPaths": [
+                {
+                    "type": "individual",
+                    "description": "blah blah",
+                    "path": "path1"
+                },
+                {
+                    "type": "recommended",
+                    "description": "blah blah",
+                    "path": "path2"
+                },
+                {
+                    "type": "fast",
+                    "description": "blah blah",
+                    "path": "path1"
+                }
+            ]
         }
     },
     "educationPaths": {
