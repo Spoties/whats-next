@@ -1,3 +1,13 @@
 <div class="paths-page">
-    <h1>Paths page</h1>
+    <div class="paths-page__path path"
+         ng-repeat="path in pathsPage.paths"
+    >
+        <span class="path__step"
+              ng-repeat="step in path"
+        >
+            <span class="path__step-name"
+                  ng-bind="step.displayName"
+            ></span>
+        </span>
+    </div>
 </div>

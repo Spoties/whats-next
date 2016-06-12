@@ -2,7 +2,7 @@ var PathsPageController = (function(){
     function PathsPageController(
         currentProfessions
     ) {
-        console.log(currentProfessions.getCurrentData());
+        this.paths = currentProfessions.getCurrentData().educationPaths;
     }
 
     PathsPageController.$inject = [
