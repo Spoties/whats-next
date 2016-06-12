@@ -1,11 +1,14 @@
 var PathsPageController = (function(){
     function PathsPageController(
+        currentProfessions,
         currentPaths
     ) {
         this.paths = currentPaths.getCurrentData();
+        this.profession = currentProfessions.getCurrentData();
     }
 
     PathsPageController.$inject = [
+        'currentProfessions',
         'currentPaths'
     ];
 

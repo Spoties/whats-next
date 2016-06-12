@@ -1,13 +1,34 @@
 <div class="paths-page">
-    <div class="paths-page__path path"
-         ng-repeat="path in pathsPage.paths"
+    <md-content layout-padding flex>
+        <md-subheader ng-bind="pathsPage.profession.displayName"></md-subheader>
+        <p class="paths-page__desc" ng-bind="pathsPage.profession.description"></p>
+    </md-content>
+
+    <md-card class="paths-page__path path"
+             ng-repeat="path in pathsPage.paths | filter:'recommended'"
     >
-        <span class="path__step"
-              ng-repeat="step in path"
-        >
-            <span class="path__step-name"
-                  ng-bind="step.displayName"
-            ></span>
-        </span>
-    </div>
+        <md-card-title>Rekomendowana droga</md-card-title>
+        <md-card-content class="paths__desc">
+            {{ path.description }}
+        </md-card-content>
+    </md-card>
+
+    <md-card class="paths-page__path path"
+             ng-repeat="path in pathsPage.paths | filter:'individual'"
+    >
+        <md-card-title>Indywidualna droga</md-card-title>
+        <md-card-content class="paths__desc">
+            {{ path.description }}
+        </md-card-content>
+    </md-card>
+
+    <md-card class="paths-page__path path"
+             ng-repeat="path in pathsPage.paths | filter:'fast'"
+    >
+        <md-card-title>Szybka droga</md-card-title>
+        <md-card-content class="paths__desc">
+            {{ path.description }}
+        </md-card-content>
+    </md-card>
+
 </div>

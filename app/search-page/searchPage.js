@@ -27,12 +27,12 @@ var SearchPageController = (function(){
     };
 
     SearchPageController.prototype.resolveResultsType = function(queryResults) {
+        this.currentProfessions.setNewData(queryResults);
+        this.currentPaths.setNewData(queryResults.educationPaths);
         if (this.isProfessionsCategory(queryResults)) {
-            this.currentProfessions.setNewData(queryResults);
             this.$location.path('/professions');
         }
         else {
-            this.currentPaths.setNewData(queryResults.educationPaths);
             this.$location.path('/paths');
         }
     };

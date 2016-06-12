@@ -1,34 +1,12 @@
 .paths-page__path {
-    margin: 10px 0;
-}
-.path {
-    overflow: auto;
-    padding: 5px 10px;
-    max-width: 100%;
-    white-space: nowrap;
+    margin: 10px;
 }
 
-.path__step {
-    vertical-align: top;
-    display: inline-block;
-    min-height: 44px;
-    line-height: 44px;
-    width: 80px;
-    padding: 5px;
-    margin-right: 0.75em;
+.paths-page__desc {
     font-size: 12px;
-    font-weight: 600;
-    white-space: normal;
-    background: #e0f5fb;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.path__step-name {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.25em;
+.paths__desc {
+    font-size: 12px;
 }
 
-.path__step:last-child {
-    margin-right: auto;
-}
