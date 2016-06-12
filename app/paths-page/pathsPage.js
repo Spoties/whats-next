@@ -1,15 +1,22 @@
 var PathsPageController = (function(){
     function PathsPageController(
         currentProfessions,
-        currentPaths
+        currentPaths,
+        $location
     ) {
         this.paths = currentPaths.getCurrentData();
         this.profession = currentProfessions.getCurrentData();
+        this.$location = $location;
     }
+
+    PathsPageController.prototype.loadDetails = function() {
+        this.$location.path('/details');
+    };
 
     PathsPageController.$inject = [
         'currentProfessions',
-        'currentPaths'
+        'currentPaths',
+        '$location'
     ];
 
     return PathsPageController;

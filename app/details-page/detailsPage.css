@@ -1,0 +1,32 @@
+.details-page {
+    font-size: 14px;
+}
+
+.details-page__title {
+    font-size: 24px;
+}
+
+.details-page__subtitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.details-page ul {
+    list-style: none;
+}
+
+.details-page ul li {
+    position: relative;
+    padding-left: 15px;
+}
+
+.details-page ul li:before {
+    content: '';
+    top: .5em;
+    left: 0;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #c0c0c0;
+    border-radius: 1px;
+}

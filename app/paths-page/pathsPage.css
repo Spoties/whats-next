@@ -10,3 +10,15 @@
     font-size: 12px;
 }
 
+.path {
+
+}
+
+.path:hover {
+    cursor: pointer;
+    background: #e2ebff;
+}
+
+.path:active {
+    background: #c3c5ff;
+}

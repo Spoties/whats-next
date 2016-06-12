@@ -6,6 +6,7 @@
 
     <md-card class="paths-page__path path"
              ng-repeat="path in pathsPage.paths | filter:'recommended'"
+             ng-click="pathsPage.loadDetails()"
     >
         <md-card-title>Rekomendowana droga</md-card-title>
         <md-card-content class="paths__desc">
