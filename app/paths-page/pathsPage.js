@@ -1,12 +1,12 @@
 var PathsPageController = (function(){
     function PathsPageController(
-        currentProfessions
+        currentPaths
     ) {
-        this.paths = currentProfessions.getCurrentData().educationPaths;
+        this.paths = currentPaths.getCurrentData();
     }
 
     PathsPageController.$inject = [
-        'currentProfessions'
+        'currentPaths'
     ];
 
     return PathsPageController;
