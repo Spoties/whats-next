@@ -1,6 +1,7 @@
 var SearchPageController = (function(){
     function SearchPageController(
         currentProfessions,
+        currentPaths,
         categoryService,
         $location
     ){
@@ -8,6 +9,7 @@ var SearchPageController = (function(){
         this.selectedItem = undefined;
         this.searchText = undefined;
         this.currentProfessions = currentProfessions;
+        this.currentPaths = currentPaths;
         this.categoryService = categoryService;
         this.$location = $location;
     }
@@ -25,11 +27,12 @@ var SearchPageController = (function(){
     };
 
     SearchPageController.prototype.resolveResultsType = function(queryResults) {
-        this.currentProfessions.setNewData(queryResults);
         if (this.isProfessionsCategory(queryResults)) {
+            this.currentProfessions.setNewData(queryResults);
             this.$location.path('/professions');
         }
         else {
+            this.currentPaths.setNewData(queryResults.educationPaths);
             this.$location.path('/paths');
         }
     };
@@ -40,6 +43,7 @@ var SearchPageController = (function(){
 
     SearchPageController.$inject = [
         'currentProfessions',
+        'currentPaths',
         'categoryService',
         '$location'
     ];
