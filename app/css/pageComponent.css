@@ -9,6 +9,10 @@
     font-weight: 400;
 }
 
+.page__title span {
+    cursor: pointer;
+}
+
 .page__logo {
     vertical-align: middle;
     margin: -0.5em 0;

@@ -1,6 +1,19 @@
 var Page = (function() {
-    function Page() {}
+    function Page(
+        $location
+    ) {
+        this.$location = $location;
+    }
 
+    Page.prototype.goHome = function() {
+        this.$location.path('/');
+    };
+
+    Page.$inject = [
+        '$location'
+    ];
+
+    return Page;
 })();
 
 angular.module('myApp').component('page', {
